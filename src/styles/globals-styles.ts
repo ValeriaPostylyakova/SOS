@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
 	body {
 			height: 100%;
 			width: 100%;
+			text-transform: uppercase;
+			letter-spacing: 2px;
 	}
 
 	ol,

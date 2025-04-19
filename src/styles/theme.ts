@@ -1,4 +1,30 @@
-const theme = {
+export interface ITheme {
+	colors: {
+		primary: string
+		secondary: string
+		tertiary: string
+	}
+	fonts: {
+		primary: string
+		secondary: string
+	}
+	fontSizes: {
+		sx: string
+		sm: string
+		md: string
+		lg: string
+		xl: string
+	}
+	breakPoints: {
+		xs: string
+		sm: string
+		md: string
+		lg: string
+		xl: string
+	}
+}
+
+const theme: ITheme = {
 	colors: {
 		primary: '#ffffff',
 		secondary: '#000000',
