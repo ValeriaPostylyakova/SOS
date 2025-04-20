@@ -10,7 +10,7 @@ export const TimelineContainer = styled.div`
 `
 
 export const TimelineItemContainer = styled.div<Props>`
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 	position: relative;
 	cursor: pointer;
 

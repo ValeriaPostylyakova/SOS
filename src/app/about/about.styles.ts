@@ -7,7 +7,7 @@ export const Line = styled.div`
 	height: 3px;
 	position: relative;
 	zindex: 70;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 `
 
 export const SliderImage = styled.img`

@@ -3,6 +3,7 @@ export interface ITheme {
 		primary: string
 		secondary: string
 		tertiary: string
+		text: string
 	}
 	fonts: {
 		primary: string
@@ -29,6 +30,7 @@ const theme: ITheme = {
 		primary: '#ffffff',
 		secondary: '#000000',
 		tertiary: '#FFB548',
+		text: '#FFFFFF14',
 	},
 	fonts: {
 		primary: 'Open Sans, sans-serif',

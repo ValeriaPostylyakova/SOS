@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
 			color: inherit;
 	}
 
-	button {
+	button, input {
 			outline: none;
 			border: none;
 			background-color: inherit;

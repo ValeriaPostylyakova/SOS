@@ -1,19 +1,16 @@
 import { FC } from 'react'
 import { Header } from '../../components/shared/header/header'
 import { BackgroundImage } from '../../components/ui/background-image'
+import { BackgroundWrapperGrid } from '../../components/ui/background-wrapper'
 import { Button } from '../../components/ui/button'
 import { Flex } from '../../components/ui/flex'
 import { SubTitle } from '../../components/ui/subtitle'
 import { Title } from '../../components/ui/title'
-import {
-	BackgroundContainer,
-	ButtonLine,
-	ContentContainer,
-} from './home.styles'
+import { ButtonLine, ContentContainer } from './home.styles'
 
 const Home: FC = () => {
 	return (
-		<BackgroundContainer>
+		<BackgroundWrapperGrid>
 			<BackgroundImage src='/backgrounds/bg-1.jpg' alt='' />
 			<ContentContainer>
 				<Header />
@@ -31,7 +28,7 @@ const Home: FC = () => {
 					</Button>
 				</Flex>
 			</ContentContainer>
-		</BackgroundContainer>
+		</BackgroundWrapperGrid>
 	)
 }
 
