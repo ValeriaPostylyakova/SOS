@@ -7,6 +7,7 @@ import {
 	FooterContainerTop,
 	FooterList,
 	FooterStyles,
+	Logo,
 } from './footer.styles'
 
 export interface Props {
@@ -18,10 +19,10 @@ export const Footer: FC<Props> = () => {
 		<FooterStyles>
 			<FooterContainerTop>
 				<a href='/'>
-					<img width={90} src='/logo.svg' alt='logo' />
+					<Logo src='/logo.svg' alt='logo' />
 				</a>
 				<HeaderMenu />
-				<Flex gap='54px'>
+				<Flex gap='20px'>
 					<a href='/'>
 						<img src='/social-icons/facebook.svg' alt='icon' />
 					</a>

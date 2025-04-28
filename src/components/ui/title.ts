@@ -3,6 +3,7 @@ import styled from 'styled-components'
 interface Props {
 	mb?: string
 	lineHeight?: string
+	align?: string
 }
 
 export const Title = styled.h1<Props>`
@@ -11,6 +12,7 @@ export const Title = styled.h1<Props>`
 	color: ${props => props.theme.colors.primary};
 	margin-bottom: ${props => props.mb || '0'};
 	line-height: ${props => props.lineHeight || '1'};
+	text-align: ${props => props.align || 'center'};
 
 	@media (max-width: ${props => props.theme.breakPoints.lg}) {
 		font-size: 66px;

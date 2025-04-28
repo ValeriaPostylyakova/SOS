@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Text } from '../../ui/text'
 
 export type Props = {
 	isActive?: boolean
@@ -50,4 +51,15 @@ export const TimelineContent = styled.div<Props>`
 	overflow: hidden;
 	max-height: ${props => (props.isOpen ? '500px' : '0')};
 	transition: max-height 0.5s ease-in-out;
+`
+export const TimeLineText = styled(Text)`
+	max-width: 400px;
+
+	@media (max-width: ${props => props.theme.breakPoints.md}) {
+		max-width: 300px;
+	}
+
+	@media (max-width: ${props => props.theme.breakPoints.sm}) {
+		max-width: 250px;
+	}
 `

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { FlexContainer } from '../../components/ui/container'
 
 export const Line = styled.div`
 	background-color: ${props => props.theme.colors.primary};
@@ -11,7 +12,26 @@ export const Line = styled.div`
 `
 
 export const SliderImage = styled.img`
-	max-width: 500px;
+	width: 500px;
 	height: auto;
 	border-radius: 4px;
+
+	@media (max-width: ${props => props.theme.breakPoints.lg}) {
+		width: 450px;
+	}
+
+	@media (max-width: ${props => props.theme.breakPoints.md}) {
+		width: 380px;
+	}
+
+	@media (max-width: ${props => props.theme.breakPoints.sm}) {
+		width: 300px;
+	}
+`
+
+export const AboutContainer = styled(FlexContainer)`
+	@media (max-width: ${props => props.theme.breakPoints.md}) {
+		flex-direction: column;
+		gap: 2rem;
+	}
 `

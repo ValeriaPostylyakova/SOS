@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import { SubtitleOrange } from '../../ui/subtitle-orange'
-import { Text } from '../../ui/text'
 import {
 	ItemContainer,
 	TimelineContent,
 	TimelineItemContainer,
+	TimeLineText,
 } from './timeLine.styles'
 
 interface Props {
@@ -29,7 +29,7 @@ export const TimelineItem: FC<Props> = ({
 			<ItemContainer style={{ marginLeft: '30px' }}>
 				<SubtitleOrange mb='5px'>{title}</SubtitleOrange>
 				<TimelineContent isOpen={isOpen}>
-					<Text>{description}</Text>
+					<TimeLineText>{description}</TimeLineText>
 				</TimelineContent>
 			</ItemContainer>
 		</TimelineItemContainer>

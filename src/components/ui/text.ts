@@ -19,4 +19,24 @@ export const Text = styled.p<Props>`
 	letter-spacing: 0px;
 	align-content: flex-start;
 	margin-left: ${props => props.ml || '0'};
+
+	@media (max-width: ${props => props.theme.breakPoints.lg}) {
+		font-size: 16px;
+	}
+
+	@media (max-width: ${props => props.theme.breakPoints.sm}) {
+		font-size: 14px;
+	}
+`
+
+export const Description = styled(Text)`
+	margin-left: 30%;
+
+	@media (max-width: ${props => props.theme.breakPoints.lg}) {
+		margin-left: 20%;
+	}
+
+	@media (max-width: ${props => props.theme.breakPoints.md}) {
+		margin-left: 5%;
+	}
 `

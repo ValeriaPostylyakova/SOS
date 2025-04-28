@@ -15,7 +15,9 @@ const Features: FC = () => {
 			<FlexContainer content='flex-end'>
 				<ContentContainer>
 					<SubTitle mb='11px'>What’s so special?</SubTitle>
-					<Title mb='50px'>features</Title>
+					<Title align='start' mb='50px'>
+						features
+					</Title>
 					<TimeLine items={timelineItems} />
 				</ContentContainer>
 			</FlexContainer>

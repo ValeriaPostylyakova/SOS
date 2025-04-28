@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Flex } from '../../components/ui/flex'
 
 export const InputContainer = styled.div`
 	position: relative;
@@ -11,6 +12,11 @@ export const InputContainer = styled.div`
 	width: 367px;
 	text-transform: lowercase;
 	height: 60px;
+
+	@media (max-width: 556px) {
+		width: 300px;
+		height: 55px;
+	}
 
 	label {
 		position: absolute;
@@ -29,5 +35,34 @@ export const InputContainer = styled.div`
 		color: ${props => props.theme.colors.tertiary};
 		background-color: transparent;
 		font-size: ${props => props.theme.fontSizes.sm};
+	}
+`
+
+export const FormContainer = styled(Flex)`
+	@media (max-width: ${props => props.theme.breakPoints.lg}) {
+		flex-direction: column;
+		align-items: start;
+	}
+`
+
+export const Images = styled.img`
+	@media (max-width: 798px) {
+		max-width: 300px;
+	}
+
+	@media (max-width: 685px) {
+		max-width: 250px;
+	}
+
+	@media (max-width: 630px) {
+		max-width: 210px;
+	}
+
+	@media (max-width: 590px) {
+		max-width: 170px;
+	}
+
+	@media (max-width: 488px) {
+		display: none;
 	}
 `

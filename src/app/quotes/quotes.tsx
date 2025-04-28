@@ -3,17 +3,17 @@ import { RewievCard } from '../../components/shared/rewiev-card/rewiev-card'
 import { BackgroundImage } from '../../components/ui/background-image'
 import { BackgroundWrapperGrid } from '../../components/ui/background-wrapper'
 import { Button } from '../../components/ui/button'
-import { FlexContainer } from '../../components/ui/container'
 import { Flex } from '../../components/ui/flex'
 import { SubTitle } from '../../components/ui/subtitle'
 import { Text } from '../../components/ui/text'
 import { Title } from '../../components/ui/title'
+import { FlexCardsContainer, QuotesContainer } from './quotes.styles'
 
 const Quotes: FC = () => {
 	return (
 		<BackgroundWrapperGrid>
 			<BackgroundImage src='/backgrounds/bg-5.jpg' alt='background' />
-			<FlexContainer>
+			<QuotesContainer>
 				<Flex direction='column' items='flex-start' gap='37px'>
 					<Flex direction='column' items='flex-start' gap='10px'>
 						<SubTitle>What people think?</SubTitle>
@@ -27,12 +27,12 @@ const Quotes: FC = () => {
 					</Text>
 					<Button padding='20px 35px'>Read more testimonials</Button>
 				</Flex>
-				<Flex direction='column' width='40%' gap='30px'>
+				<FlexCardsContainer direction='column' width='40%' gap='30px'>
 					<RewievCard alignSelf='flex-end' />
 					<RewievCard alignSelf='flex-start' />
 					<RewievCard alignSelf='flex-end' />
-				</Flex>
-			</FlexContainer>
+				</FlexCardsContainer>
+			</QuotesContainer>
 		</BackgroundWrapperGrid>
 	)
 }
