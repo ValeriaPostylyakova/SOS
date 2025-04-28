@@ -6,7 +6,7 @@ export const Line = styled.div`
 	border-radius: 4px;
 	height: 3px;
 	position: relative;
-	zindex: 70;
+	zindex: 7000000;
 	margin-bottom: 20px;
 `
 

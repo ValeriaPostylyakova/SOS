@@ -9,6 +9,7 @@ interface Props {
 
 export const FlexContainer = styled.div<Props>`
 	max-width: ${props => props.width || '1300px'};
+	width: 100%;
 	margin: 0 auto;
 	padding: ${props => props.padding || '0 10px'};
 	display: flex;

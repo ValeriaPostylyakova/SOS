@@ -1,10 +1,18 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { FlexContainer } from '../../ui/container'
 import { Flex } from '../../ui/flex'
+import {
+	BurgerMenuStyled,
+	MenuButtonLine,
+	MenuButtonStyle,
+	MenuOpenBackground,
+} from '../burger-menu/burger-menu.styles'
 import { HeaderMenu } from './header-menu'
 import { HeaderStyled, Logo } from './header.styles'
 
 export const Header: FC = () => {
+	const [openMenu, setOpenMenu] = useState(false)
+
 	return (
 		<HeaderStyled>
 			<FlexContainer padding='21px 10px'>
@@ -19,6 +27,13 @@ export const Header: FC = () => {
 					<a href='/'>
 						<img src='/social-icons/steam.svg' alt='icons' />
 					</a>
+					<MenuButtonStyle onClick={() => setOpenMenu(!openMenu)}>
+						<MenuButtonLine />
+						<MenuButtonLine />
+						<MenuButtonLine />
+					</MenuButtonStyle>
+					{openMenu && <BurgerMenuStyled />}
+					{openMenu && <MenuOpenBackground />}
 				</Flex>
 			</FlexContainer>
 		</HeaderStyled>
