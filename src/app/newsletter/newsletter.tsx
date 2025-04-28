@@ -24,17 +24,16 @@ const Newsletter: FC = () => {
 						will send you emails containing information about game. We don’t
 						spam.
 					</Text>
-					<form>
-						<FormContainer>
-							<InputContainer>
-								<label>Your email address</label>
-								<input type='email' />
-							</InputContainer>
-							<Button type='submit' padding='20px 70px'>
-								Subscribe now
-							</Button>
-						</FormContainer>
-					</form>
+
+					<FormContainer>
+						<InputContainer>
+							<label>Your email address</label>
+							<input type='email' />
+						</InputContainer>
+						<Button type='submit' padding='20px 70px'>
+							Subscribe now
+						</Button>
+					</FormContainer>
 				</div>
 			</FlexContainer>
 		</BackgroundWrapperGrid>

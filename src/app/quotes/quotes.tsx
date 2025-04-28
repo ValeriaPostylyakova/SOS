@@ -17,7 +17,7 @@ const Quotes: FC = () => {
 				<Flex direction='column' items='flex-start' gap='37px'>
 					<Flex direction='column' items='flex-start' gap='10px'>
 						<SubTitle>What people think?</SubTitle>
-						<Title>Press quotes</Title>
+						<Title align='start'>Press quotes </Title>
 					</Flex>
 					<Text mb='20px'>
 						Our goal is to create a product and service that you’re satisfied

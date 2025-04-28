@@ -13,14 +13,14 @@ const About: FC = () => {
 			<BackgroundImage src='/backgrounds/bg-2.jpg' alt='background' />
 			<AboutContainer width='1050px'>
 				<Flex direction='column' items='flex-start'>
-					<SubTitle>What is SOS?</SubTitle>
-					<Title mb='10px'>
-						social battle <br /> royale game
+					<SubTitle>What is SOS? </SubTitle>
+					<Title align='start' mb='10px'>
+						social battle royale game
 					</Title>
 					<Line />
 					<Description>
 						Each round, <b>you</b> and <b>15</b> other contestants compete to
-						escape a deadly island filled with monsters. The trick is:{' '}
+						escape a deadly island filled with monsters. The trick is:
 						<b>three</b> people can survive. Will you run solo or form
 						friendships with others to escape?
 					</Description>

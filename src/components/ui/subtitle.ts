@@ -11,6 +11,8 @@ export const SubTitle = styled.h1<Props>`
 	color: ${props => props.theme.colors.primary};
 	margin-bottom: ${props => props.mb || '0'};
 	line-height: ${props => props.lineHeight || '1'};
+	max-width: 80%;
+	text-align: center;
 
 	@media (max-width: ${props => props.theme.breakPoints.sm}) {
 		font-size: 16px;

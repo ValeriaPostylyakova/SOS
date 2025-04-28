@@ -30,7 +30,8 @@ export const Text = styled.p<Props>`
 `
 
 export const Description = styled(Text)`
-	margin-left: 30%;
+	margin-left: 25%;
+	margin-right: 20px;
 
 	@media (max-width: ${props => props.theme.breakPoints.lg}) {
 		margin-left: 20%;

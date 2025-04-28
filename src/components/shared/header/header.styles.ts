@@ -27,6 +27,8 @@ export const HeaderMenuStyled = styled.ul`
 	align-items: center;
 	gap: 32px;
 	flex-wrap: wrap;
+	max-width: 1140px;
+	padding: 0px 100px;
 
 	li {
 		transition: all 1s ease-in-out;

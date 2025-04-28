@@ -45,6 +45,9 @@ export const TimelineItemContainer = styled.div<Props>`
 
 export const ItemContainer = styled.div`
 	margin-bottom: 27px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
 `
 
 export const TimelineContent = styled.div<Props>`

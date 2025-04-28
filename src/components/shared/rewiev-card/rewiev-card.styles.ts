@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { SubtitleOrange } from '../../ui/subtitle-orange'
 
 interface Props {
 	fontSize?: string
@@ -25,4 +26,8 @@ export const CardUserDescription = styled.div<Props>`
 	line-height: 1.2;
 	text-transform: lowercase;
 	letter-spacing: 0px;
+`
+
+export const TitleName = styled(SubtitleOrange)`
+	white-space: nowrap;
 `

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Flex } from '../../components/ui/flex'
 
 export const InputContainer = styled.div`
 	position: relative;
@@ -38,7 +37,10 @@ export const InputContainer = styled.div`
 	}
 `
 
-export const FormContainer = styled(Flex)`
+export const FormContainer = styled.form`
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 	@media (max-width: ${props => props.theme.breakPoints.lg}) {
 		flex-direction: column;
 		align-items: start;

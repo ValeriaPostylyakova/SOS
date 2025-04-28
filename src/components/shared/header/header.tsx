@@ -21,12 +21,14 @@ export const Header: FC = () => {
 				</a>
 				<HeaderMenu />
 				<Flex gap='17px'>
-					<a href='/'>
-						<img src='/social-icons/xbox.svg' alt='icons' />
-					</a>
-					<a href='/'>
-						<img src='/social-icons/steam.svg' alt='icons' />
-					</a>
+					<Flex gap='17px'>
+						<a href='/'>
+							<img src='/social-icons/xbox.svg' alt='icons' />
+						</a>
+						<a href='/'>
+							<img src='/social-icons/steam.svg' alt='icons' />
+						</a>
+					</Flex>
 					<MenuButtonStyle onClick={() => setOpenMenu(!openMenu)}>
 						<MenuButtonLine />
 						<MenuButtonLine />

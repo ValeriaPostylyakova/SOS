@@ -22,7 +22,7 @@ const Requirements: FC = () => (
 				mb='133px'
 			>
 				<SubTitle>Can My Computer Run this game?</SubTitle>
-				<Title>system requirements</Title>
+				<Title>system requirements </Title>
 			</Flex>
 			<ListTable>
 				<ListItem>

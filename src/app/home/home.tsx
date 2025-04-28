@@ -21,7 +21,7 @@ const Home: FC = () => {
 					</SubTitle>
 					<Button>
 						<Flex>
-							<p>Buy Now on Steam</p>
+							<p>Buy Now on Steam </p>
 							<ButtonLine />
 							<p>$14.99</p>
 						</Flex>

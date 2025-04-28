@@ -42,6 +42,7 @@ export const FooterList = styled.ul`
 	align-items: center;
 	flex-wrap: wrap;
 	padding: 0px 10px;
+	max-width: 65%;
 
 	li {
 		font-family: ${props => props.theme.fonts.primary};
