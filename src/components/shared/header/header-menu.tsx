@@ -1,25 +1,21 @@
 import { FC } from 'react'
+import { Props } from './header'
 import { HeaderMenuStyled } from './header.styles'
+import { MENU_ITEMS_CONFIG } from './menu'
+import { triggerScrollToSection } from '../../../libs/triggerScrollToSection'
 
-export const HeaderMenu: FC = () => {
+export const HeaderMenu: FC<Props> = ({ refs }) => {
 	return (
 		<nav>
 			<HeaderMenuStyled>
-				<li>
-					<a href='/'>main</a>
-				</li>
-				<li>
-					<a href='/'>about</a>
-				</li>
-				<li>
-					<a href='/'>features</a>
-				</li>
-				<li>
-					<a href='/'>requirements</a>
-				</li>
-				<li>
-					<a href='/'>quotes</a>
-				</li>
+				{MENU_ITEMS_CONFIG.map(menuItem => (
+					<li
+						key={menuItem.text}
+						onClick={() => triggerScrollToSection(refs, menuItem.refName)}
+					>
+						{menuItem.text}
+					</li>
+				))}
 			</HeaderMenuStyled>
 		</nav>
 	)

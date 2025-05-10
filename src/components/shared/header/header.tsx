@@ -1,8 +1,9 @@
 import { FC, useState } from 'react'
+import { SectionName } from '../../../@types/pages/smooth-scroll-page-props'
 import { FlexContainer } from '../../ui/container'
 import { Flex } from '../../ui/flex'
+import { BurgerMenu } from '../burger-menu/burger-menu'
 import {
-	BurgerMenuStyled,
 	MenuButtonLine,
 	MenuButtonStyle,
 	MenuOpenBackground,
@@ -10,7 +11,11 @@ import {
 import { HeaderMenu } from './header-menu'
 import { HeaderStyled, Logo } from './header.styles'
 
-export const Header: FC = () => {
+export interface Props {
+	refs: SectionName
+}
+
+export const Header: FC<Props> = ({ refs }) => {
 	const [openMenu, setOpenMenu] = useState(false)
 
 	return (
@@ -19,7 +24,7 @@ export const Header: FC = () => {
 				<a href='/'>
 					<Logo src='/logo.svg' alt='logo' />
 				</a>
-				<HeaderMenu />
+				<HeaderMenu refs={refs} />
 				<Flex gap='17px'>
 					<Flex gap='17px'>
 						<a href='/'>
@@ -34,7 +39,7 @@ export const Header: FC = () => {
 						<MenuButtonLine />
 						<MenuButtonLine />
 					</MenuButtonStyle>
-					{openMenu && <BurgerMenuStyled />}
+					{openMenu && <BurgerMenu refs={refs} setOpen={setOpenMenu} />}
 					{openMenu && <MenuOpenBackground />}
 				</Flex>
 			</FlexContainer>

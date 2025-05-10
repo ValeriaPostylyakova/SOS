@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { PropsScrollPage } from '../../@types/pages/smooth-scroll-page-props'
 import { timelineItems } from '../../components/shared/time-line/time-line'
 import { TimeLine } from '../../components/shared/time-line/timeLine'
 import { BackgroundImage } from '../../components/ui/background-image'
@@ -8,9 +9,9 @@ import { SubTitle } from '../../components/ui/subtitle'
 import { Title } from '../../components/ui/title'
 import { ContentContainer } from './features.styles'
 
-const Features: FC = () => {
+const Features: FC<PropsScrollPage> = ({ sectionRef }) => {
 	return (
-		<BackgroundWrapperGrid>
+		<BackgroundWrapperGrid ref={sectionRef} id='features'>
 			<BackgroundImage src='/backgrounds/bg-3.jpg' alt='background' />
 			<FlexContainer content='flex-end'>
 				<ContentContainer>

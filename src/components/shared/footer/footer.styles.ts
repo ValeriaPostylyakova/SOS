@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { FlexContainer } from '../../ui/container'
 
 export const FooterStyles = styled.footer`
-	padding: 20px 0px 47px 0px;
+	padding: 20px 0px;
 	background-color: ${props => props.theme.colors.secondary};
 `
 

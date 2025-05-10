@@ -31,38 +31,37 @@ export const HeaderMenuStyled = styled.ul`
 	padding: 0px 100px;
 
 	li {
+		cursor: pointer;
 		transition: all 1s ease-in-out;
-		a {
-			position: relative;
-			color: ${props => props.theme.colors.primary};
-			font-size: ${props => props.theme.fontSizes.sx};
-			font-family: ${props => props.theme.fonts.primary};
-			font-weight: 700;
+		position: relative;
+		color: ${props => props.theme.colors.primary};
+		font-size: ${props => props.theme.fontSizes.sx};
+		font-family: ${props => props.theme.fonts.primary};
+		font-weight: 700;
+
+		li:after {
+			content: '';
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: -3px;
+			width: 0;
+			height: 2px;
+			background-color: ${props => props.theme.colors.primary};
+			transition: width 0.5s;
 		}
-	}
 
-	a:after {
-		content: '';
-		display: block;
-		position: absolute;
-		right: 0;
-		bottom: -3px;
-		width: 0;
-		height: 2px;
-		background-color: ${props => props.theme.colors.primary};
-		transition: width 0.5s;
-	}
-
-	a:hover:after {
-		content: '';
-		width: 100%;
-		display: block;
-		position: absolute;
-		left: 0;
-		bottom: -3px;
-		height: 2px;
-		background-color: ${props => props.theme.colors.primary};
-		transition: width 0.5s;
+		li:hover:after {
+			content: '';
+			width: 100%;
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: -3px;
+			height: 2px;
+			background-color: ${props => props.theme.colors.primary};
+			transition: width 0.5s;
+		}
 	}
 
 	@media (max-width: ${props => props.theme.breakPoints.lg}) {

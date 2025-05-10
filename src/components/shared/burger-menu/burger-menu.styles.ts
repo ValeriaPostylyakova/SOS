@@ -19,7 +19,7 @@ export const MenuOpenBackground = styled.div`
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	backdrop-filter: blur(4px);
+	backdrop-filter: blur(0px);
 	z-index: 10;
 `
 
@@ -28,30 +28,40 @@ export const MenuButtonLine = styled.span`
 	height: 3px;
 	background-color: ${props => props.theme.colors.primary};
 	border-radius: 4px;
+
+	&:nth-child(2) {
+		width: 80%;
+		margin-left: auto;
+	}
 `
 
 export const BurgerMenuStyled = styled.div`
 	position: fixed;
-	top: 120px;
+	border-radius: 15px 0px 0px 0px;
+	top: 100px;
 	right: 0;
 	z-index: 100;
 	width: 50%;
 	height: 100vh;
-	background-color: #040404ff;
+	background-color: #131313b4;
 
 	@media (max-width: ${props => props.theme.breakPoints.md}) {
-		width: 70%;
-	}
-
-	@media (max-width: ${props => props.theme.breakPoints.sm}) {
 		width: 100%;
+		border-radius: 0px 0px 0px 0px;
 	}
 `
 
 export const BurgerMenuList = styled.ul`
+	height: 80%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 32px;
+
+	li {
+		color: ${props => props.theme.colors.primary};
+		font-family: ${props => props.theme.fonts.primary};
+		font-weight: 700;
+	}
 `

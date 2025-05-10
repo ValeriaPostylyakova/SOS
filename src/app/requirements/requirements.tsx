@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { PropsScrollPage } from '../../@types/pages/smooth-scroll-page-props'
 import { BackgroundImage } from '../../components/ui/background-image'
 import { BackgroundWrapper } from '../../components/ui/background-wrapper'
 import { Container } from '../../components/ui/container'
@@ -9,8 +10,8 @@ import { Text } from '../../components/ui/text'
 import { Title } from '../../components/ui/title'
 import { ListItem, ListTable } from './requirements.styles'
 
-const Requirements: FC = () => (
-	<BackgroundWrapper>
+const Requirements: FC<PropsScrollPage> = ({ sectionRef }) => (
+	<BackgroundWrapper ref={sectionRef} id='requirements'>
 		<BackgroundImage src='/backgrounds/bg-4.jpg' alt='background' />
 		<Container padding='145px 10px 0 10px'>
 			<Flex

@@ -10,6 +10,7 @@ export const QuotesContainer = styled(FlexContainer)`
 		width: 80%;
 
 	@media (max-width: ${props => props.theme.breakPoints.md}) {
+		padding-top: 40px;
 		width: 90%; 
 	}
 `

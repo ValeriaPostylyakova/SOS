@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { PropsScrollPage } from '../../@types/pages/smooth-scroll-page-props'
 import { BackgroundImage } from '../../components/ui/background-image'
 import { BackgroundWrapperGrid } from '../../components/ui/background-wrapper'
 import { Flex } from '../../components/ui/flex'
@@ -7,9 +8,9 @@ import { Description } from '../../components/ui/text'
 import { Title } from '../../components/ui/title'
 import { AboutContainer, Line, SliderImage } from './about.styles'
 
-const About: FC = () => {
+const About: FC<PropsScrollPage> = ({ sectionRef }) => {
 	return (
-		<BackgroundWrapperGrid>
+		<BackgroundWrapperGrid ref={sectionRef} id='about'>
 			<BackgroundImage src='/backgrounds/bg-2.jpg' alt='background' />
 			<AboutContainer width='1050px'>
 				<Flex direction='column' items='flex-start'>

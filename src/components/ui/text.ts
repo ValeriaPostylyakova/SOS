@@ -14,7 +14,7 @@ export const Text = styled.p<Props>`
 	font-family: ${props => props.theme.fonts.primary};
 	color: ${props => props.theme.colors.primary};
 	margin-bottom: ${props => props.mb || '0'};
-	text-transform: lowercase;
+	text-transform: none;
 	line-height: ${props => props.lineHeight || '1.2'};
 	letter-spacing: 0px;
 	align-content: flex-start;

@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { PropsScrollPage } from '../../@types/pages/smooth-scroll-page-props'
 import { BackgroundWrapperGrid } from '../../components/ui/background-wrapper'
 import { Button } from '../../components/ui/button'
 import { FlexContainer } from '../../components/ui/container'
@@ -8,9 +9,9 @@ import { Text } from '../../components/ui/text'
 import { Title } from '../../components/ui/title'
 import { FormContainer, Images, InputContainer } from './newsletter.styles'
 
-const Newsletter: FC = () => {
+const Newsletter: FC<PropsScrollPage> = ({ sectionRef }) => {
 	return (
-		<BackgroundWrapperGrid bgcolor='#0a0a0a'>
+		<BackgroundWrapperGrid ref={sectionRef} bgcolor='#0a0a0a' id='newsletter'>
 			<FlexContainer>
 				<Images src='/image.png' alt='bg' />
 				<div>

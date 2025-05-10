@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { PropsScrollPage } from '../../@types/pages/smooth-scroll-page-props'
 import { RewievCard } from '../../components/shared/rewiev-card/rewiev-card'
 import { BackgroundImage } from '../../components/ui/background-image'
 import { BackgroundWrapperGrid } from '../../components/ui/background-wrapper'
@@ -9,9 +10,9 @@ import { Text } from '../../components/ui/text'
 import { Title } from '../../components/ui/title'
 import { FlexCardsContainer, QuotesContainer } from './quotes.styles'
 
-const Quotes: FC = () => {
+const Quotes: FC<PropsScrollPage> = ({ sectionRef }) => {
 	return (
-		<BackgroundWrapperGrid>
+		<BackgroundWrapperGrid ref={sectionRef} id='quotes'>
 			<BackgroundImage src='/backgrounds/bg-5.jpg' alt='background' />
 			<QuotesContainer>
 				<Flex direction='column' items='flex-start' gap='37px'>
