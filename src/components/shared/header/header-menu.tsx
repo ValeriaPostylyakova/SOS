@@ -1,8 +1,8 @@
 import { FC } from 'react'
+import { triggerScrollToSection } from '../../../libs/triggerScrollToSection'
 import { Props } from './header'
 import { HeaderMenuStyled } from './header.styles'
 import { MENU_ITEMS_CONFIG } from './menu'
-import { triggerScrollToSection } from '../../../libs/triggerScrollToSection'
 
 export const HeaderMenu: FC<Props> = ({ refs }) => {
 	return (
@@ -10,6 +10,7 @@ export const HeaderMenu: FC<Props> = ({ refs }) => {
 			<HeaderMenuStyled>
 				{MENU_ITEMS_CONFIG.map(menuItem => (
 					<li
+						id='menu-item'
 						key={menuItem.text}
 						onClick={() => triggerScrollToSection(refs, menuItem.refName)}
 					>

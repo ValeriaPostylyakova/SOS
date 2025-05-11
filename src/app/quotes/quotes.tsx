@@ -28,7 +28,7 @@ const Quotes: FC<PropsScrollPage> = ({ sectionRef }) => {
 					</Text>
 					<Button padding='20px 35px'>Read more testimonials</Button>
 				</Flex>
-				<FlexCardsContainer direction='column' width='40%' gap='30px'>
+				<FlexCardsContainer direction='column' width='50%' gap='30px'>
 					<RewievCard alignSelf='flex-end' />
 					<RewievCard alignSelf='flex-start' />
 					<RewievCard alignSelf='flex-end' />

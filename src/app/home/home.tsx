@@ -17,19 +17,31 @@ const Home: FC<PropsListScrollPage> = ({ sectionRef, sectionsRefs }) => {
 
 	useGSAP(
 		() => {
-			gsap.fromTo(
-				'#title',
-				{
-					opacity: 0,
-					direction: 40,
-					delay: 4,
-					y: 500,
-					scrollTrigger: {
-						trigger: '#title',
+			gsap
+				.timeline()
+				.fromTo(
+					'#title',
+					{
+						scale: 0.4,
 					},
-				},
-				{ opacity: 1, y: 0 }
-			)
+					{
+						scale: 1,
+						duration: 1,
+					}
+				)
+				.fromTo(
+					'#subtitle',
+					{
+						opacity: 0,
+						y: 30,
+					},
+					{
+						opacity: 1,
+						y: 0,
+						duration: 0.5,
+					}
+				)
+				.fromTo('#button', { opacity: 0 }, { opacity: 1, duration: 0.8 })
 		},
 		{
 			scope: container,
@@ -38,16 +50,16 @@ const Home: FC<PropsListScrollPage> = ({ sectionRef, sectionsRefs }) => {
 	return (
 		<BackgroundWrapperGrid ref={sectionRef} id='home'>
 			<BackgroundImage src='/backgrounds/bg-1.jpg' alt='' />
-			<ContentContainer ref={container}>
+			<ContentContainer id='content-container' ref={container}>
 				<Header refs={sectionsRefs} />
 				<Flex items='center' content='center' direction='column'>
 					<Title id='title' lineHeight='0.6'>
 						SURVIVE AT ALL COSTS
 					</Title>
-					<SubTitle className='subtitle' mb='20px'>
+					<SubTitle id='subtitle' mb='20px'>
 						Experience new social battle royale game
 					</SubTitle>
-					<Button>
+					<Button id='button'>
 						<Flex>
 							<p>Buy Now on Steam </p>
 							<ButtonLine />

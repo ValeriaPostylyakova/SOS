@@ -39,7 +39,7 @@ export const HeaderMenuStyled = styled.ul`
 		font-family: ${props => props.theme.fonts.primary};
 		font-weight: 700;
 
-		li:after {
+		&:after {
 			content: '';
 			display: block;
 			position: absolute;
@@ -51,7 +51,7 @@ export const HeaderMenuStyled = styled.ul`
 			transition: width 0.5s;
 		}
 
-		li:hover:after {
+		&:hover:after {
 			content: '';
 			width: 100%;
 			display: block;
