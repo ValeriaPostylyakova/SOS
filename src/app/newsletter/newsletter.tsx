@@ -1,3 +1,5 @@
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import { FC } from 'react'
 import { PropsScrollPage } from '../../@types/pages/smooth-scroll-page-props'
 import { BackgroundWrapperGrid } from '../../components/ui/background-wrapper'
@@ -10,6 +12,30 @@ import { Title } from '../../components/ui/title'
 import { FormContainer, Images, InputContainer } from './newsletter.styles'
 
 const Newsletter: FC<PropsScrollPage> = ({ sectionRef }) => {
+	useGSAP(
+		() => {
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: sectionRef.current,
+						scrub: true,
+						start: '30% center',
+						end: 'center center',
+					},
+				})
+				.from('#input-container', {
+					y: 400,
+					duration: 1,
+				})
+				.from('#button', {
+					delay: 0.3,
+					y: 400,
+					duration: 0.5,
+				})
+		},
+		{ scope: sectionRef }
+	)
+
 	return (
 		<BackgroundWrapperGrid ref={sectionRef} bgcolor='#0a0a0a' id='newsletter'>
 			<FlexContainer>
@@ -26,12 +52,12 @@ const Newsletter: FC<PropsScrollPage> = ({ sectionRef }) => {
 						spam.
 					</Text>
 
-					<FormContainer>
-						<InputContainer>
+					<FormContainer id='form'>
+						<InputContainer id='input-container'>
 							<label>Your email address</label>
 							<input type='email' />
 						</InputContainer>
-						<Button type='submit' padding='20px 70px'>
+						<Button id='button' type='submit' padding='20px 70px'>
 							Subscribe now
 						</Button>
 					</FormContainer>

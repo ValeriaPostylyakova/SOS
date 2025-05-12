@@ -14,21 +14,39 @@ const About: FC<PropsScrollPage> = ({ sectionRef }) => {
 	useGSAP(
 		() => {
 			gsap
-				.timeline()
+				.timeline({
+					scrollTrigger: {
+						trigger: '#subtitle',
+						toggleActions: 'restart none restart none',
+					},
+				})
 				.fromTo(
 					'#subtitle',
 					{
-						opacity: 0,
 						x: -200,
-						scrollTrigger: {
-							trigger: '#about',
-						},
+						opacity: 0,
+						scale: 3,
 					},
 					{
 						opacity: 1,
+						rotate: 360,
 						x: 0,
+						scale: 1,
+						duration: 1.3,
+					},
+					0
+				)
+				.fromTo(
+					'#slide-images',
+					{
+						x: 800,
+					},
+					{
+						x: 0,
+						rotate: 360,
 						duration: 1,
-					}
+					},
+					0
 				)
 				.fromTo(
 					'#title',
@@ -37,7 +55,7 @@ const About: FC<PropsScrollPage> = ({ sectionRef }) => {
 					},
 					{
 						opacity: 1,
-						duration: 1,
+						duration: 0.6,
 					}
 				)
 				.fromTo(
@@ -58,9 +76,9 @@ const About: FC<PropsScrollPage> = ({ sectionRef }) => {
 	)
 
 	return (
-		<BackgroundWrapperGrid ref={sectionRef} id='about'>
+		<BackgroundWrapperGrid ref={sectionRef}>
 			<BackgroundImage src='/backgrounds/bg-2.jpg' alt='background' />
-			<AboutContainer width='1050px'>
+			<AboutContainer width='1050px' id='about'>
 				<Flex direction='column' items='flex-start'>
 					<SubTitle id='subtitle'>What is SOS? </SubTitle>
 					<Title id='title' align='start' mb='10px'>
@@ -78,7 +96,7 @@ const About: FC<PropsScrollPage> = ({ sectionRef }) => {
 						death.
 					</Description>
 				</Flex>
-				<SliderImage src='/slider/slider1.jpg' />
+				<SliderImage src='/slider/slider1.jpg' id='slide-images' />
 			</AboutContainer>
 		</BackgroundWrapperGrid>
 	)

@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { SplitText } from 'gsap/SplitText'
 import { useRef } from 'react'
 import About from './app/about/about'
 import Features from './app/features/features'
@@ -14,6 +15,7 @@ import { AppWrapper } from './components/ui/app-wrapper'
 
 gsap.registerPlugin(ScrollToPlugin)
 gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(SplitText)
 gsap.registerPlugin(useGSAP)
 
 const App = () => {

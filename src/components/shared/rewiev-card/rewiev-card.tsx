@@ -10,11 +10,12 @@ import {
 
 export interface Props {
 	alignSelf: string
+	id: string
 }
 
-export const RewievCard: FC<Props> = ({ alignSelf }) => {
+export const RewievCard: FC<Props> = ({ alignSelf, id }) => {
 	return (
-		<Card alignSelf={alignSelf}>
+		<Card id={id} alignSelf={alignSelf}>
 			<CardContainer>
 				<Flex mb='17px'>
 					<img src='/avatars/avatar2.svg' alt='avatar' />
