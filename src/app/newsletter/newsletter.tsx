@@ -39,7 +39,7 @@ const Newsletter: FC<PropsScrollPage> = ({ sectionRef }) => {
 	return (
 		<BackgroundWrapperGrid ref={sectionRef} bgcolor='#0a0a0a' id='newsletter'>
 			<FlexContainer>
-				<Images src='/image.png' alt='bg' />
+				<Images src='/SOS/image.png' alt='bg' />
 				<div>
 					<Flex direction='column' items='flex-start' gap='10px' mb='45px'>
 						<SubTitle>Want to stay in touch?</SubTitle>

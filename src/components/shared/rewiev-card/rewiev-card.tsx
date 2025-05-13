@@ -18,13 +18,13 @@ export const RewievCard: FC<Props> = ({ alignSelf, id }) => {
 		<Card id={id} alignSelf={alignSelf}>
 			<CardContainer>
 				<Flex mb='17px'>
-					<img src='/avatars/avatar2.svg' alt='avatar' />
+					<img src='/SOS/avatars/avatar2.svg' alt='avatar' />
 					<Flex direction='column' items='flex-start' gap='2px'>
 						<TitleName fontSize='24px'>Evan Lahti</TitleName>
 						<CardUserDescription>PC Gamer </CardUserDescription>
 					</Flex>
 					<a href='/'>
-						<img src='/social-icons/twitter.svg' alt='twiiter' />
+						<img src='/SOS/social-icons/twitter.svg' alt='twiiter' />
 					</a>
 				</Flex>
 				<Text mb='14px'>

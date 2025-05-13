@@ -57,7 +57,7 @@ const Features: FC<PropsScrollPage> = ({ sectionRef }) => {
 
 	return (
 		<BackgroundWrapperGrid ref={sectionRef} id='features'>
-			<BackgroundImage src='/backgrounds/bg-3.jpg' alt='background' />
+			<BackgroundImage src='/SOS/backgrounds/bg-3.jpg' alt='background' />
 			<FlexContainer content='flex-end'>
 				<ContentContainer>
 					<SubTitle mb='11px' id='subtitle'>

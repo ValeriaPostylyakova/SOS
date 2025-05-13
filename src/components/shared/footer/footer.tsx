@@ -19,21 +19,21 @@ export const Footer: FC<Props> = () => {
 		<FooterStyles>
 			<FooterContainerTop>
 				<a href='/'>
-					<Logo src='/logo.svg' alt='logo' />
+					<Logo src='/SOS/logo.svg' alt='logo' />
 				</a>
 				<HeaderMenu />
 				<Flex gap='20px'>
 					<a href='/'>
-						<img src='/social-icons/facebook.svg' alt='icon' />
+						<img src='/SOS/social-icons/facebook.svg' alt='icon' />
 					</a>
 					<a href='/'>
-						<img src='/social-icons/twitter.svg' alt='icon' />
+						<img src='/SOS/social-icons/twitter.svg' alt='icon' />
 					</a>
 					<a href='/'>
-						<img src='/social-icons/youtube.svg' alt='icon' />
+						<img src='/SOS/social-icons/youtube.svg' alt='icon' />
 					</a>
 					<a href='/'>
-						<img src='/social-icons/twitch.svg' alt='icon' />
+						<img src='/SOS/social-icons/twitch.svg' alt='icon' />
 					</a>
 				</Flex>
 			</FooterContainerTop>

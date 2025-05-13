@@ -62,7 +62,7 @@ const Quotes: FC<PropsScrollPage> = ({ sectionRef }) => {
 
 	return (
 		<BackgroundWrapperGrid ref={sectionRef} id='quotes'>
-			<BackgroundImage src='/backgrounds/bg-5.jpg' alt='background' />
+			<BackgroundImage src='/SOS/backgrounds/bg-5.jpg' alt='background' />
 			<QuotesContainer>
 				<Flex direction='column' items='flex-start' gap='37px'>
 					<Flex direction='column' items='flex-start' gap='10px'>

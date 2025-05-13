@@ -45,7 +45,7 @@ const Requirements: FC<PropsScrollPage> = ({ sectionRef }) => {
 
 	return (
 		<BackgroundWrapper ref={sectionRef} id='requirements'>
-			<BackgroundImage src='/backgrounds/bg-4.jpg' alt='background' />
+			<BackgroundImage src='/SOS/backgrounds/bg-4.jpg' alt='background' />
 			<Container padding='145px 10px 0 10px'>
 				<Flex
 					width='100%'

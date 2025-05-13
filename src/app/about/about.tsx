@@ -77,7 +77,7 @@ const About: FC<PropsScrollPage> = ({ sectionRef }) => {
 
 	return (
 		<BackgroundWrapperGrid ref={sectionRef}>
-			<BackgroundImage src='/backgrounds/bg-2.jpg' alt='background' />
+			<BackgroundImage src='/SOS/backgrounds/bg-2.jpg' alt='background' />
 			<AboutContainer width='1050px' id='about'>
 				<Flex direction='column' items='flex-start'>
 					<SubTitle id='subtitle'>What is SOS? </SubTitle>
@@ -96,7 +96,7 @@ const About: FC<PropsScrollPage> = ({ sectionRef }) => {
 						death.
 					</Description>
 				</Flex>
-				<SliderImage src='/slider/slider1.jpg' id='slide-images' />
+				<SliderImage src='/SOS/slider/slider1.jpg' id='slide-images' />
 			</AboutContainer>
 		</BackgroundWrapperGrid>
 	)
