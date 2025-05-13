@@ -43,6 +43,7 @@ export const BurgerMenuStyled = styled.div`
 	z-index: 100;
 	width: 50%;
 	height: 100vh;
+	transition: all 0.5s ease;
 	background-color: #131313b4;
 
 	@media (max-width: ${props => props.theme.breakPoints.md}) {

@@ -30,7 +30,8 @@ export const SliderImage = styled.img`
 `
 
 export const AboutContainer = styled(FlexContainer)`
-	@media (max-width: ${props => props.theme.breakPoints.md}) {
+	padding: 40px 20px;
+	@media (max-width: ${props => props.theme.breakPoints.lg}) {
 		flex-direction: column;
 		gap: 2rem;
 	}

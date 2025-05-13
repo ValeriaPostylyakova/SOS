@@ -3,11 +3,8 @@ import { SectionName } from '../../../@types/pages/smooth-scroll-page-props'
 import { FlexContainer } from '../../ui/container'
 import { Flex } from '../../ui/flex'
 import { BurgerMenu } from '../burger-menu/burger-menu'
-import {
-	MenuButtonLine,
-	MenuButtonStyle,
-	MenuOpenBackground,
-} from '../burger-menu/burger-menu.styles'
+import { BurgerMenuButton } from '../burger-menu/burger-menu-button'
+import { MenuOpenBackground } from '../burger-menu/burger-menu.styles'
 import { HeaderMenu } from './header-menu'
 import { HeaderStyled, Logo } from './header.styles'
 
@@ -16,7 +13,7 @@ export interface Props {
 }
 
 export const Header: FC<Props> = ({ refs }) => {
-	const [openMenu, setOpenMenu] = useState(false)
+	const [openMenu, setOpenMenu] = useState<boolean | undefined>()
 
 	return (
 		<HeaderStyled>
@@ -34,12 +31,10 @@ export const Header: FC<Props> = ({ refs }) => {
 							<img src='/social-icons/steam.svg' alt='icons' />
 						</a>
 					</Flex>
-					<MenuButtonStyle onClick={() => setOpenMenu(!openMenu)}>
-						<MenuButtonLine />
-						<MenuButtonLine />
-						<MenuButtonLine />
-					</MenuButtonStyle>
-					{openMenu && <BurgerMenu refs={refs} setOpen={setOpenMenu} />}
+					<BurgerMenuButton setOpenMenu={setOpenMenu} openMenu={openMenu} />
+					{openMenu && (
+						<BurgerMenu refs={refs} open={openMenu} setOpen={setOpenMenu} />
+					)}
 					{openMenu && <MenuOpenBackground />}
 				</Flex>
 			</FlexContainer>

@@ -7,5 +7,6 @@ interface Props {
 
 export const SubtitleOrange = styled(SubTitle)<Props>`
 	color: ${props => props.theme.colors.tertiary};
+	white-space: nowrap;
 	font-size: ${props => props.theme.fontSizes.lg} || ${props => props.fontSize};
 `

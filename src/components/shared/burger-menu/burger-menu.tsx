@@ -6,6 +6,7 @@ import { BurgerMenuList, BurgerMenuStyled } from './burger-menu.styles'
 
 export interface Props {
 	refs: SectionName
+	open: boolean
 	setOpen: (open: boolean) => void
 }
 
