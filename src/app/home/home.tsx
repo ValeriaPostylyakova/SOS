@@ -49,7 +49,7 @@ const Home: FC<PropsListScrollPage> = ({ sectionRef, sectionsRefs }) => {
 	)
 	return (
 		<BackgroundWrapperGrid ref={sectionRef} id='home'>
-			<BackgroundImage src='/SOS/backgrounds/bg-1.jpg' alt='' />
+			<BackgroundImage src='/backgrounds/bg-1.jpg' alt='' />
 			<ContentContainer id='content-container' ref={container}>
 				<Header refs={sectionsRefs} />
 				<Flex items='center' content='center' direction='column'>
