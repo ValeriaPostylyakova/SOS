@@ -9,7 +9,7 @@ import { HeaderMenu } from './header-menu'
 import { HeaderStyled, Logo } from './header.styles'
 
 export interface Props {
-	refs: SectionName
+	refs: SectionName | null
 }
 
 export const Header: FC<Props> = ({ refs }) => {

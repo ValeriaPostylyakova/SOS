@@ -21,7 +21,7 @@ export const Footer: FC<Props> = () => {
 				<a href='/'>
 					<Logo src='/SOS/logo.svg' alt='logo' />
 				</a>
-				<HeaderMenu />
+				<HeaderMenu refs={null} />
 				<Flex gap='20px'>
 					<a href='/'>
 						<img src='/SOS/social-icons/facebook.svg' alt='icon' />
